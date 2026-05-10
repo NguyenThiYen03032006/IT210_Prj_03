@@ -69,13 +69,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="" th:each="showtime : ${showtimes}">
+                    <tr th:each="showtime : ${showtimes}">
                         <td th:text="${showtime.id}">1</td>
                         <td th:text="${showtime.movie.title}">Ten phim</td>
                         <td th:text="${showtime.room.name}">Phong</td>
                         <td th:text="${#temporals.format(showtime.startTime, 'dd/MM/yyyy HH:mm')}">08/05/2026 09:00</td>
                         <td th:text="${#temporals.format(showtime.endTime, 'dd/MM/yyyy HH:mm')}">08/05/2026 11:00</td>
-                        <td><span class="badge badge-warning" th:text="${showtime.status}">ACTIVE</span></td>
+                        <td>
+                            <span class="badge border border-warning text-warning" th:text="${showtime.status}"></span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

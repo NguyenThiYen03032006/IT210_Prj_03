@@ -338,6 +338,30 @@ body.cinema-body {
     vertical-align: middle;
 }
 
+/* Hiệu ứng hover cho dòng trong bảng */
+.cinema-table.table-hover tbody tr {
+    transition: all 0.2s ease; /* Giúp màu chuyển mượt hơn */
+}
+
+.cinema-table.table-hover tbody tr:hover {
+    background-color: var(--cinema-gold) !important; /* Đổi nền sang vàng */
+    cursor: pointer;
+}
+
+/* Đổi màu toàn bộ chữ bên trong tr khi hover thành màu tối để nổi bật trên nền vàng */
+.cinema-table.table-hover tbody tr:hover td,
+.cinema-table.table-hover tbody tr:hover th,
+.cinema-table.table-hover tbody tr:hover .text-muted,
+.cinema-table.table-hover tbody tr:hover .badge {
+    color: #1a1a1a !important;
+}
+
+/* Tùy chỉnh riêng cho badge khi hover để không bị chìm */
+.cinema-table.table-hover tbody tr:hover .badge {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #1a1a1a;
+}
+
 .cinema-card {
     background: var(--cinema-panel);
     border: 1px solid var(--cinema-line);
